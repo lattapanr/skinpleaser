@@ -1,0 +1,119 @@
+footer {
+    height: 10em;
+    border-top: 1.5px solid #F2E6EA;
+}
+
+.navbar-wrapper {
+    display: flex;
+    margin: auto;
+    width: 80vw;
+    max-width: 1500px;
+    padding: 3em 0;
+    justify-content: space-between;
+    line-height: 1.5em;
+}
+
+.social-media-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.15em;
+}
+
+.subscribe-text {
+    margin-bottom: .5em;
+}
+
+.footer-menu {
+    font-size: 1.5rem;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+.subscription-items {
+    border: 1px solid #F2E6EA;
+    max-width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.email-box {
+    padding: .5em;
+    font-size: 1.35rem;
+    border: 1px solid #F2E6EA;
+    border: none;
+    width: 80%;
+}
+
+.email-box:hover {
+    background-color: #F2E6EA;
+    border: none;
+    transition: 250ms;
+}
+
+.submit {
+    width: 20%;
+    border: none;
+    background-color: rgba(33, 33, 33);
+    color: rgba(251, 250, 249, 255);
+}
+
+.submit:hover {
+    background-color: rgba(251, 250, 249, 255);
+    color: rgba(33, 33, 33);
+    transition: 250ms;
+}
+
+input[type=submit] {
+    font-size: 1.25rem;
+}
+
+
+
+@media screen and (max-width: 485px) {
+    .navbar-wrapper {
+        display: flex;
+        flex-direction: column;
+        line-height: 4em;
+        width: 100%;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .social-media-container,
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    .subscription-form-container {
+        width: 80%;
+    }
+
+    .subscribe-text {
+        display: none;
+    }
+
+    input[type=email] {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 951px) {
+
+    .social-media-container,
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .fa-brands,
+    .menu-item {
+        padding: 0 1em;
+    }
+}

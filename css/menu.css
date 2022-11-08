@@ -1,0 +1,149 @@
+.masthead {
+    width: 100%;
+    /* height: 10em; */
+    background-color: rgba(251, 250, 249, 255);
+    z-index: 5;
+    top: 0;
+    position: fixed;
+}
+
+.masthead-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    padding-top: 1.2em;
+    width: 100%;
+}
+
+.fa-bars {
+    margin: 2rem 4rem;
+    font-size: 2.5rem;
+    z-index: 2;
+}
+
+.fa-magnifying-glass {
+    margin: 2rem 4rem;
+    font-size: 2.5rem;
+    z-index: 2;
+}
+
+.sidebar-item {
+    margin: 20px;
+    font-size: 2rem;
+    padding: 0.5em 0;
+}
+
+.sidebar {
+    background: white;
+    height: 100vh;
+    background-color: hsla(360, 100%, 100%, 0.63);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 60%;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    padding-top: 10em;
+    transform: translateX(-100%);
+    transition: transform 450ms ease-out;
+}
+
+.sidebar[data-visible="true"] {
+    transform: translateX(0%);
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: rgb(33, 33, 33);
+}
+
+.sidebar-link:visited {
+    color: rgb(33, 33, 33);
+}
+
+.search-bar {
+    background: white;
+    height: 100vh;
+    background-color: hsla(360, 100%, 100%, 0.63);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 60%;
+    right: 0;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    padding-top: 10em;
+    transform: translateX(100%);
+    transition: transform 450ms ease-out;
+}
+
+.search-bar input {
+    padding: 1em;
+    width: 70%;
+    border-radius: 100px;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.search-bar[data-visible="true"] {
+    transform: translateX(0%);
+}
+
+.scroll-hidden-nav {
+    width: 70%;
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1.70em;
+}
+
+.hidden-nav-item:hover {
+    text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 650px) {
+    .scroll-hidden-nav {
+        display: none !important;
+    }
+
+    .masthead {
+        height: 6em !important;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .logo img {
+        width: 50vw !important;
+    }
+
+    .fa-bars {
+        font-size: 2.2rem;
+    }
+
+    .fa-magnifying-glass {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .search-bar,
+    .sidebar {
+        right: 0;
+        left: 0;
+    }
+
+    /* 
+    .masthead {
+        height: 5em !important;
+    } */
+}
