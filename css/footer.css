@@ -66,6 +66,12 @@ footer {
     transition: 250ms;
 }
 
+input {
+    -webkit-appearance: none;
+    -webkit-border-radius:0; 
+    border-radius:0;
+}
+
 input[type=submit] {
     font-size: 1.25rem;
 }
