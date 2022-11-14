@@ -1,32 +1,28 @@
 //Close and open sidebars
+function closeSidebar(sidebar, icon) {
+
+    icon.addEventListener('click', () => {
+        const visibilityNav = sidebar.getAttribute('data-visible');
+    
+        if (visibilityNav === 'false') {
+            sidebar.setAttribute('data-visible', true);
+        } else if (visibilityNav === 'true') {
+            sidebar.setAttribute('data-visible', false);
+        }
+    });
+}
+
 const sideBarNav = document.querySelector('.sidebar')
 const toggleMenu = document.querySelector('.fa-bars')
 
-toggleMenu.addEventListener('click', () => {
-    const visibilityNav = sideBarNav.getAttribute('data-visible');
-
-
-    if (visibilityNav === 'false') {
-        sideBarNav.setAttribute('data-visible', true)
-    } else if (visibilityNav === 'true') {
-        sideBarNav.setAttribute('data-visible', false)
-    }
-})
+closeSidebar(sideBarNav, toggleMenu);
 
 
 const searchBarNav = document.querySelector('.search-bar')
 const searchMenu = document.querySelector('.fa-magnifying-glass')
 
+closeSidebar(searchBarNav, searchMenu);
 
-searchMenu.addEventListener('click', () => {
-    const visibility = searchBarNav.getAttribute('data-visible');
-
-    if (visibility === 'false') {
-        searchBarNav.setAttribute('data-visible', true)
-    } else if (visibility === 'true') {
-        searchBarNav.setAttribute('data-visible', false)
-    }
-})
 
 
 //Shrinking and Expanding navigation bar on scroll
