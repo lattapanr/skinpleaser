@@ -24,7 +24,6 @@ const searchMenu = document.querySelector('.fa-magnifying-glass')
 closeSidebar(searchBarNav, searchMenu);
 
 
-
 //Shrinking and Expanding navigation bar on scroll
 window.onscroll = function () { scrollFunction() };
 

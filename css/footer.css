@@ -1,6 +1,11 @@
+@import "reset.css";
+@import "menu.css";
+@import "style.css";
+
+
 footer {
     height: 10em;
-    border-top: 1.5px solid #F2E6EA;
+    border-top: 1.5px solid var(--c-lightpink);
 }
 
 .navbar-wrapper {
@@ -32,7 +37,7 @@ footer {
 }
 
 .subscription-items {
-    border: 1px solid #F2E6EA;
+    border: 1px solid var(--c-lightpink);
     max-width: 70%;
     display: flex;
     justify-content: space-between;
@@ -42,13 +47,13 @@ footer {
 .email-box {
     padding: .5em;
     font-size: 1.35rem;
-    border: 1px solid #F2E6EA;
+    border: 1px solid var(--c-lightpink);
     border: none;
     width: 80%;
 }
 
 .email-box:hover {
-    background-color: #F2E6EA;
+    background-color: var(--c-lightpink);
     border: none;
     transition: 250ms;
 }
@@ -56,13 +61,13 @@ footer {
 .submit {
     width: 20%;
     border: none;
-    background-color: rgba(33, 33, 33);
-    color: rgba(251, 250, 249, 255);
+    background-color: var(--c-primary-dark);
+    color: var(--c-primary-light);
 }
 
 .submit:hover {
-    background-color: rgba(251, 250, 249, 255);
-    color: rgba(33, 33, 33);
+    background-color: var(--c-primary-light);
+    color: var(--c-primary-dark);
     transition: 250ms;
 }
 

@@ -1,7 +1,11 @@
+@import "reset.css";
+@import "style.css";
+@import "footer.css";
+
+
 .masthead {
     width: 100%;
-    /* height: 10em; */
-    background-color: rgba(251, 250, 249, 255);
+    background-color: var(--c-primary-light);
     z-index: 5;
     top: 0;
     position: fixed;
@@ -39,7 +43,7 @@
 }
 
 .sidebar {
-    background: white;
+    background: var(--c-primary-light);
     height: 100vh;
     background-color: hsla(360, 100%, 100%, 0.63);
     z-index: 1;
@@ -60,15 +64,15 @@
 
 .sidebar-link {
     text-decoration: none;
-    color: rgb(33, 33, 33);
+    color: var(--c-primary-dark);
 }
 
 .sidebar-link:visited {
-    color: rgb(33, 33, 33);
+    color: var(--c-primary-dark);
 }
 
 .search-bar {
-    background: white;
+    background: var(--c-primary-light);
     height: 100vh;
     background-color: hsla(360, 100%, 100%, 0.63);
     z-index: 1;
@@ -141,9 +145,4 @@
         right: 0;
         left: 0;
     }
-
-    /* 
-    .masthead {
-        height: 5em !important;
-    } */
 }
