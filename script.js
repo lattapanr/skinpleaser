@@ -1,5 +1,3 @@
-/** @format */
-
 //Close and open sidebars
 const sideBarNav = document.querySelector(".sidebar");
 const toggleMenu = document.querySelector(".fa-bars");
@@ -48,3 +46,16 @@ function scrollFunction() {
     hiddenNav.display = "flex";
   }
 }
+
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "f796fac675msh188ce912bf43145p186718jsnd870715da68b",
+    "X-RapidAPI-Host": "sephora.p.rapidapi.com",
+  },
+};
+
+fetch("http://makeup-api.herokuapp.com/api/v1/products.json")
+  .then((response) => response.json())
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error));
