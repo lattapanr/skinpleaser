@@ -224,8 +224,7 @@ a {
   }
 
   .landing-page {
-    background: url("https://imgur.com/kywW1CN.jpg") no-repeat center center /
-      cover;
+    background: url("/images/vdo-thumbnail.jpg") no-repeat center center / cover;
   }
 
   .main-content,
