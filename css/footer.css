@@ -9,25 +9,34 @@ footer {
 
 .navbar-wrapper {
   display: flex;
-  margin: auto;
-  width: 80vw;
-  max-width: 1500px;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  max-width: 1000px;
   padding: 3em 0;
-  justify-content: space-between;
   line-height: 1.5em;
 }
 
 .social-media-container {
   display: flex;
-  flex-direction: column;
-  font-size: 1.15em;
+  justify-content: space-between;
+  width: 20rem;
+  margin-bottom: 2rem;
 }
 
 .subscribe-text {
-  margin-bottom: 0.5em;
+  display: none;
+}
+
+.fa-brands {
+  font-size: 2.25rem;
 }
 
 .footer-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 20rem;
   font-size: 1.5rem;
 }
 
@@ -35,20 +44,25 @@ footer {
   text-decoration: underline;
 }
 
+.subscription-form-container {
+  width: 300px;
+  margin-bottom: 2rem;
+}
+
 .subscription-items {
   border: 1px solid var(--c-lightpink);
-  max-width: 70%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
 
 .email-box {
-  padding: 0.5em;
-  font-size: 1.35rem;
+  width: 80%;
+  padding: 0.75em;
+  font-size: 1.5rem;
   border: 1px solid var(--c-lightpink);
   border: none;
-  width: 80%;
 }
 
 .email-box:hover {
@@ -78,41 +92,29 @@ input {
 
 input[type="submit"] {
   font-size: 1.25rem;
+  width: 20%;
 }
 
-@media screen and (max-width: 485px) {
+@media screen and (min-width: 850px) {
   .navbar-wrapper {
-    display: flex;
-    flex-direction: column;
-    line-height: 4em;
-    width: 100%;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  .social-media-container,
-  .footer-menu {
-    display: flex;
+    max-width: 1000px;
     flex-direction: row;
-    justify-content: space-around;
-    width: 65%;
-    margin: 0 auto;
+    justify-content: space-evenly;
+    line-height: 4em;
   }
 
   .subscription-form-container {
-    width: 80%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .subscribe-text {
-    display: none;
+    display: block;
   }
 
-  input[type="email"] {
-    text-align: left;
-  }
-}
-
-@media screen and (min-width: 951px) {
   .social-media-container,
   .footer-menu {
     display: flex;
@@ -122,5 +124,9 @@ input[type="submit"] {
   .fa-brands,
   .menu-item {
     padding: 0 1em;
+  }
+
+  .footer-menu {
+    font-size: 1.65rem;
   }
 }

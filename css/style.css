@@ -7,11 +7,11 @@
 :root {
   --c-primary-dark: rgb(33, 33, 33);
   --c-primary-light: rgba(251, 250, 249, 255);
-  --c-lightpink: #f2e6ea;
+  --c-lightpink: #fdf5f2;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 50%;
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
@@ -29,30 +29,17 @@ body {
   margin: auto;
   width: 100%;
   margin-top: 10em;
-}
-
-.landing-page {
   position: relative;
   height: 100vh;
   display: flex;
   justify-content: center;
   text-align: center;
   color: var(--c-primary-light);
+  background: url("/images/heroImg.jpg") no-repeat center center / cover;
 }
 
 .video-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.video-wrap video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+  display: none;
 }
 
 .landing-page-overlay {
@@ -67,28 +54,33 @@ body {
 }
 
 .main-content {
-  padding-top: 10em;
+  padding-top: 1.25em;
+  font-size: 1.5rem;
   z-index: 2;
   font-family: "Lora", serif;
-  line-height: 5rem;
+  line-height: 3rem;
   width: 80%;
   font-weight: lighter;
-  font-size: 1.5rem;
+}
+
+.main-content > h1 {
+  font-size: 4.7rem;
 }
 
 .main-content h1 {
-  line-height: 8rem;
+  line-height: 5.5rem;
   font-size: 4rem;
+  margin-top: 20rem;
 }
 
 .main-content h1 span {
-  font-size: 6.5rem;
+  font-size: 6rem;
   font-style: italic;
 }
 
-.main-content h3 span {
-  font-style: italic;
-  font-size: 1.7rem;
+.main-content h3 {
+  margin-top: 4rem;
+  font-size: 2rem;
 }
 
 a {
@@ -98,7 +90,7 @@ a {
 
 .down-arrow {
   position: absolute;
-  top: calc(100vh - 200px);
+  top: calc(100vh - 250px);
   left: 50%;
   width: 0;
   height: 40px;
@@ -138,15 +130,9 @@ a {
 
 .blog-category-wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
   overflow: hidden;
-}
-
-.anti-aging-blog,
-.product-blog {
-  display: grid;
-  grid-template-columns: 55% 45%;
 }
 
 .blog-title {
@@ -157,16 +143,25 @@ a {
   margin-bottom: 2.5rem;
 }
 
+.anti-aging-blog,
+.product-blog,
 .treatment-blog {
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 100% 0%;
+}
+
+.treatment-blog {
   background-color: var(--c-lightpink);
 }
 
 .blog-image {
-  height: 667.55px;
-  overflow: hidden;
-  width: 100%;
+  display: none;
+}
+
+.blog-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .blog-content {
@@ -177,9 +172,12 @@ a {
   align-items: center;
   line-height: 1.5;
   width: 60%;
-  min-height: 80%;
+  height: 80%;
   background-color: rgba(131, 123, 123, 0.2);
   overflow: hidden;
+  padding-top: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .blog-text {
@@ -192,6 +190,7 @@ a {
   padding: 0.5em 1em;
   text-align: center;
   margin-top: 3em;
+  margin-bottom: 2em;
   border: none;
   font-size: 1.5rem;
   background-color: var(--c-primary-dark);
@@ -205,7 +204,7 @@ a {
 
 @media screen and (min-width: 1250px) {
   html {
-    font-size: 80%;
+    font-size: 70%;
   }
 }
 
@@ -215,60 +214,61 @@ a {
   }
 }
 
-@media screen and (max-width: 740px) {
-  .video-wrap {
-    display: none;
-  }
-
-  .landing-page {
-    background: url("/images/heroImg.jpg") no-repeat center center / cover;
-  }
-
-  .main-content,
-  .main-content h3 > span {
-    padding-top: 1.25em;
-    font-size: 1.75rem;
-  }
-
-  .main-content > h1 {
-    font-size: 4.7rem;
-  }
-
-  .main-content h1 > span {
-    display: none;
-  }
-
-  .blog-image {
-    display: none;
-  }
-
-  .anti-aging-blog,
-  .product-blog,
-  .treatment-blog {
-    display: grid;
-    grid-template-columns: 100% 0%;
-  }
-
-  .blog-content {
-    padding-top: 1em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
-
-  .blog-link {
-    margin-bottom: 2em;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .landing-page {
-    margin-top: 5em;
-  }
-}
-
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
   html {
-    font-size: 50%;
+    font-size: 62.5%;
+  }
+
+  @media screen and (min-width: 740px) {
+    .video-wrap {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .video-wrap video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .main-content {
+      padding-top: 10em;
+    }
+
+    .main-content h1 {
+      margin-top: 10rem;
+    }
+
+    .anti-aging-blog,
+    .product-blog {
+      display: grid;
+      grid-template-columns: 55% 45%;
+    }
+
+    .treatment-blog {
+      display: grid;
+      grid-template-columns: 45% 55%;
+    }
+
+    .blog-image {
+      display: block;
+      height: 667.55px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .blog-content {
+      padding-top: 0;
+    }
+
+    .blog-link {
+      margin-bottom: 0;
+    }
   }
 
   .blog-title {
@@ -296,10 +296,6 @@ a {
 
   .main-content > h1 {
     font-size: 3rem;
-  }
-
-  .main-content > h1 > span {
-    font-size: 5rem;
   }
 }
 
